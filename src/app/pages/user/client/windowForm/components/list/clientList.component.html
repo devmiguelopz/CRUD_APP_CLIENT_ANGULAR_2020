@@ -1,0 +1,50 @@
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form>
+        <div class="form-row">
+          <div class=" form-group col-md-6">
+            <label for="txtClient">Average</label>
+            <input type="text" class="form-control" id="txtClient" disabled [value]="average">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="txtCellPhone">Standard deviation</label>
+            <input type="text" class="form-control" id="txtCellPhone" disabled [value]="standardDeviation">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-12">
+      <div class="table-responsive">
+        <table class="table listClient table-bordered" style="width:100%">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Last name</th>
+              <th scope="col">Age</th>
+              <th scope="col">Date of birth</th>
+              <th scope="col">Actions</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = "let client of clientList">
+
+              <td>{{client.name}}</td>
+              <td>{{client.lastName}}</td>
+              <td>{{client.age}}</td>
+              <td>{{client.dateOfBirth}}</td>
+              <td>
+                <span class="material-icons icon-image-preview iconAction" data-toggle="tooltip" data-placement="top" title="Edit" (click)="onEdit(client)">edit</span>
+                <span class="material-icons icon-image-preview iconAction" data-toggle="tooltip" data-placement="top" title="Delete" (click)="onDelete(client)">delete</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
