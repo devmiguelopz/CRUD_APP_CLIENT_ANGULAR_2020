@@ -19,8 +19,11 @@
 
 # ¿Qué es un observable?: 
   Los observables permiten como su nombre lo indica observar cierta acción de un sujeto. En la programacion existe un patron observer,
-  el cual cuenta con sujeto y un observador, un ejemplo claro estpá en el plugin jquery:$("test").on("click", ()=>{console.log("test")}).
+  el cual cuenta con sujeto y un observador, un ejemplo claro estpá en el plugin jquery:
+  ```jquery
+  $("test").on("click", ()=>{console.log("test")}).
   Este ejemplo lo que realiza es que el elemento dom se está subcribiendo a un observable, entonces el observable estara atento al click, una vez hecho click, el observable mandara un notifiacion y está ejecutara el callback dek evento.
+  ```
 
 # Explicar la utilidad de un closure con un ejemplo aplicado a la web que se ha pedido desarrollar: Son cierres que guardan en memoria referencias de estado.
   Un claro ejemplo es cuando dibujo la lista de clientes y dejo como referencia por cada iteracion su valor de client (click)="onEdit(client), enttonces cuando
