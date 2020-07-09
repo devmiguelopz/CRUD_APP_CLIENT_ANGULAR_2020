@@ -25,7 +25,7 @@
 # Explicar la utilidad de un closure con un ejemplo aplicado a la web que se ha pedido desarrollar: Son cierres que guardan en memoria referencias de estado.
   Un claro ejemplo es cuando dibujo la lista de clientes y dejo como referencia por cada iteracion su valor de client (click)="onEdit(client), enttonces cuando
   hago click en editar cualquier elemento de la lista, este tendra su estado en memoria de cuando lo reccorio.
-
+```angular
   <tr *ngFor = "let client of clientList">
     <td>{{client.name}}</td>
     <td>{{client.lastName}}</td>
@@ -36,4 +36,4 @@
       <span class="material-icons icon-image-preview iconAction" data-toggle="tooltip" data-placement="top" title="Delete" (click)="onDelete(client)">delete</span>
     </td>
   </tr>
-
+```
