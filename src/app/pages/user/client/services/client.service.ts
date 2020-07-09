@@ -40,6 +40,25 @@ export class ClientService {
    deleteClient(objClient:Client){
     this.clientList.remove(objClient.$key)
    }
-
-
+  
+     ValidateClient(objClient: Client, isUpdate = false): boolean {
+    debugger;
+    if (isUpdate && !objClient.$key) {
+      return false;
+    }
+    if (!objClient.name) {
+      return false;
+    }
+    if (!objClient.lastName) {
+      return false;
+    }
+    if (!(objClient.age && objClient.age > 0)) {
+      return false;
+    }
+    if (!objClient.dateOfBirth) {
+      return false;
+    }
+    return true
+  }
+  
 }
